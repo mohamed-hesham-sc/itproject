@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="profile.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kemet - places</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Playfair+Display:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/profile.css" />
+</head>
+<body>
+    <header>
+    <nav class="container profile-nav-inner">
+      <div class="profile-nav-brand">
+        <i class="fa-solid fa-ankh" aria-hidden="true"></i>
+        <span>Kemet</span>
+      </div>
+
+      <ul class="profile-nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./places.html" class="active">Places</a></li>
+        <li><a href="./booking.html">Booking</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="./profile.html" >Profile</a></li>
+      </ul>
+
+      <div class="profile-theme-toggle-wrap">
+        <div class="signin">
+      <a href="./logIn.html">Log In</a>
+      <a href="./sign-up.html">Sign up</a>
+
+    </div>
+        <i class="fa-solid fa-sun" aria-hidden="true"></i>
+        <label class="profile-toggle-switch">
+          <input type="checkbox" id="profile-theme-toggle" aria-label="Toggle dark mode" />
+          <span class="profile-slider"></span>
+        </label>
+        <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        
+      </div>
+    </nav>
+  </header>
+
+    <section class="hero">
+        <h6>DISCOVER ANCEINT WONDERS</h6>
+        <h5>Find Your <span>Gilded</span> Escape</h5>
+    </section>
+    
+    <section id="allcards">
+    <div class="search-container">
+        <div class="search-bar">
+            <input type="text" placeholder="Search destinations, experiences, cities...">
+            <button class="search-btn">Search</button>
+        </div>
+        <div class="filter-chips">
+            <button class="chip active">All</button>
+            <button class="chip">🏛️ Historical</button>
+            <button class="chip">🏺 Museums</button>
+            <button class="chip">⛵ Nile Cruise</button>
+            <button class="chip">🌴 Leisure</button>
+            
+        </div>
+    </div>
+
+        <div class="cards-grid">
+
+            <!-- Card 1: Giza -->
+            <div class="dest-card" data-category="historical leisure">
+                <div class="card-image">
+                    <span class="badge">EGYPT</span>
+                    <img src="./img/card 1.jpg" alt="Giza Pyramids">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Giza Pyramids & Sphinx</h3>
+                    <div class="price-list">
+                        <p class="price-egyptian">🇪🇬 Egyptian: <span>60 EGP</span></p>
+                        <p class="price-arab">🇸🇦 Arab: <span>400 EGP</span></p>
+                        <p class="price-foreign">🌍 Foreign: <span>700 EGP</span></p>
+                    </div>
+                    <button class="book-btn"
+                        data-desc="The Giza Pyramids are the only remaining wonder of the ancient world. This tour includes the three great pyramids, the Sphinx, and the Valley Temple. You will learn about the secret construction techniques used by ancient Egyptians 4,500 years ago."
+                        data-hours="8:00 AM - 5:00 PM"
+                        data-season="October - April"
+                        data-map="https://maps.google.com/?q=Giza+Pyramids+Egypt"
+                        data-rating="5">View Details</button>
+                </div>
+            </div>
+
+            <!-- Card 2: Philae -->
+            <div class="dest-card" data-category="historical nile cruise">
+                <div class="card-image"><span class="badge">ASWAN</span><img src="./img/card 2.jpg"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Philae Temple</h3>
+                    <div class="price-list">
+                        <p class="price-egyptian">🇪🇬 Egyptian: <span>50 EGP</span></p>
+                        <p class="price-arab">🇸🇦 Arab: <span>350 EGP</span></p>
+                        <p class="price-foreign">🌍 Foreign: <span>600 EGP</span></p>
+                    </div>
+                    <button class="book-btn"
+                        data-desc="Philae Temple is a majestic island complex dedicated to the goddess Isis. After being saved from the rising waters of the Nile by UNESCO, it remains one of Egypt's most romantic and stunning archaeological sites."
+                        data-hours="7:00 AM - 4:00 PM"
+                        data-season="November - March"
+                        data-map="https://maps.google.com/?q=Philae+Temple+Aswan"
+                        data-rating="5">View Details</button>
+                </div>
+            </div>
+
+            <!-- Card 3: Valley of Kings -->
+            <div class="dest-card" data-category="historical">
+                <div class="card-image"><span class="badge">LUXOR</span><img src="./img/card 3.jpg"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Valley of the Kings</h3>
+                    <div class="price-list">
+                        <p class="price-egyptian">🇪🇬 Egyptian: <span>60 EGP</span></p>
+                        <p class="price-arab">🇸🇦 Arab: <span>380 EGP</span></p>
+                        <p class="price-foreign">🌍 Foreign: <span>650 EGP</span></p>
+                    </div>
+                    <button class="book-btn"
+                        data-desc="Explore the final resting place of Egypt's New Kingdom pharaohs. The valley contains 63 tombs, including the famous boy-king Tutankhamun. The colors on the walls look as if they were painted yesterday."
+                        data-hours="6:00 AM - 5:00 PM"
+                        data-season="October - March"
+                        data-map="https://maps.google.com/?q=Valley+of+the+Kings+Luxor"
+                        data-rating="5">View Details</button>
+                </div>
+            </div>
+
+            <!-- Card 4: Abu Simbel -->
+            <div class="dest-card" data-category="historical">
+                <div class="card-image"><span class="badge">ASWAN</span><img src="./img/card 4.jpg"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Abu Simbel Temples</h3>
+                    <div class="price-list">
+                        <p class="price-egyptian">🇪🇬 Egyptian: <span>30 EGP</span></p>
+                        <p class="price-arab">🇸🇦 Arab: <span>200 EGP</span></p>
+                        <p class="price-foreign">🌍 Foreign: <span>750 EGP</span></p>
+                    </div>
+                    <button class="book-btn"
+                        data-desc="Built by Ramesses II, these two massive rock-cut temples are masterpieces of ancient engineering. Twice a year, the sun aligns to illuminate the inner sanctum of the Great Temple."
+                        data-hours="5:00 AM - 6:00 PM"
+                        data-season="October - February"
+                        data-map="https://maps.google.com/?q=Abu+Simbel+Temples+Egypt"
+                        data-rating="5">View Details</button>
+                </div>
+            </div>
+
+            <!-- Card 5: Karnak -->
+            <div class="dest-card" data-category="historical">
+                <div class="card-image"><span class="badge">LUXOR</span><img src="./img/card 5.jpg"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Karnak Temple</h3>
+                    <div class="price-list">
+                        <p class="price-egyptian">🇪🇬 Egyptian: <span>40 EGP</span></p>
+                        <p class="price-arab">🇸🇦 Arab: <span>450 EGP</span></p>
+                        <p class="price-foreign">🌍 Foreign: <span>600 EGP</span></p>
+                    </div>
+                    <button class="book-btn"
+                        data-desc="The largest religious building ever constructed. Walk through the Hypostyle Hall with its 134 massive columns and discover the history of over 1,500 years of construction."
+                        data-hours="6:00 AM - 5:30 PM"
+                        data-season="October - April"
+                        data-map="https://maps.google.com/?q=Karnak+Temple+Luxor"
+                        data-rating="4">View Details</button>
+                </div>
+            </div>
+
+            <!-- Card 6: NMEC -->
+            <div class="dest-card" data-category="museums">
+                <div class="card-image"><span class="badge">CAIRO</span><img src="./img/card 6.jpg"></div>
+                <div class="card-content">
+                    <h3 class="card-title">National Museum (NMEC)</h3>
+                    <div class="price-list">
+                        <p class="price-egyptian">🇪🇬 Egyptian: <span>90 EGP</span></p>
+                        <p class="price-arab">🇸🇦 Arab: <span>450 EGP</span></p>
+                        <p class="price-foreign">🌍 Foreign: <span>550 EGP</span></p>
+                    </div>
+                    <button class="book-btn"
+                        data-desc="Home to the Royal Mummies. This museum offers a comprehensive view of Egyptian civilization from pre-historic times to the modern day, featuring the incredible Mummies Hall."
+                        data-hours="9:00 AM - 9:00 PM"
+                        data-season="All Year"
+                        data-map="https://maps.google.com/?q=National+Museum+Egyptian+Civilization+Cairo"
+                        data-rating="4">View Details</button>
+                </div>
+            </div>
+
+            <!-- Card 7: GEM -->
+            <div class="dest-card" data-category="museums">
+                <div class="card-image"><span class="badge">GIZA</span><img src="./img/card 7.jfif"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Grand Egyptian Museum</h3>
+                    <div class="price-list">
+                        <p class="price-egyptian">🇪🇬 Egyptian: <span>200 EGP</span></p>
+                        <p class="price-arab">🇸🇦 Arab: <span>900 EGP</span></p>
+                        <p class="price-foreign">🌍 Foreign: <span>1200 EGP</span></p>
+                    </div>
+                    <button class="book-btn"
+                        data-desc="The world's largest archaeological museum dedicated to a single civilization. It houses the full collection of King Tutankhamun for the first time in history."
+                        data-hours="9:00 AM - 10:00 PM"
+                        data-season="All Year"
+                        data-map="https://maps.google.com/?q=Grand+Egyptian+Museum+Giza"
+                        data-rating="5">View Details</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="overray" id="overray"></div>
+    <div class="popup-card" id="popup-card">
+        <button id="closebtn">&times;</button>
+        <div class="popup-card-body" id="popup-card-body"></div>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src=".//js/profile (1).js"></script>
+    <footer>
+        <div class="footer-contentt">
+            <p>&copy; 2026 FCAI Helwan University - Web Development Project</p>
+        </div>
+    </footer>
+</body>
+
+</html>

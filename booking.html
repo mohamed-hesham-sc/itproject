@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" class="mainn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KEMET – Book Your Experience</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/styleeee.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="./css/profile.css" />
+</head>
+<body class="main">
+
+<!-- NAV -->
+<header>
+    <nav class="container profile-nav-inner">
+      <div class="profile-nav-brand">
+        <i class="fa-solid fa-ankh" aria-hidden="true"></i>
+        <span>Kemet</span>
+      </div>
+
+      <ul class="profile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="places.html">Places</a></li>
+        <li><a href="booking.html" class="active">Booking</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="profile.html" >Profile</a></li>
+      </ul>
+
+      <div class="profile-theme-toggle-wrap">
+        <div class="signin">
+      <a href="./logIn.html">Log In</a>
+      <a href="./sign-up.html">Sign up</a>
+
+    </div>
+        <i class="fa-solid fa-sun" aria-hidden="true"></i>
+        <label class="profile-toggle-switch">
+          <input type="checkbox" id="profile-theme-toggle" aria-label="Toggle dark mode" />
+          <span class="profile-slider"></span>
+        </label>
+        <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        
+      </div>
+    </nav>
+  </header>
+<!-- PAGE -->
+<div class="page">
+
+  <!-- LEFT IMAGE PANEL -->
+  <div class="panel-left">
+    <img class="destination-image" id="destImg" src="" alt="Destination">
+    <div class="left-overlay"></div>
+    <div class="rating-badge">⭐ 4.9 · Expert Guided</div>
+    <div class="left-caption">
+      <h2 id="captionTitle">Giza Pyramids &amp; Sphinx</h2>
+      <p id="captionSub">Journey through 5,000 years of history</p>
+    </div>
+  </div>
+
+  <!-- RIGHT FORM PANEL -->
+  <div class="panel-right">
+    <div class="form-header">
+      <h1>Book Your Experience</h1>
+      <p>Complete the form below to reserve your spot</p>
+    </div>
+
+    <!-- DESTINATION TABS -->
+    <div class="field">
+      <label>Destination</label>
+      <div class="dest-tabs" id="destTabs"></div>
+    </div>
+
+    <!-- DATE & NATIONALITY -->
+    <div class="field-row">
+      <div class="field">
+        <label>Select Visit Date</label>
+        <input type="date" id="visitDate">
+      </div>
+      <div class="field">
+        <label>Select Nationality</label>
+        <div class="select-wrap">
+          <select id="nationality" onchange="updatePrice()">
+            <option value="egyptian">Egyptian</option>
+            <option value="arab">Arab</option>
+            <option value="foreign">Foreign</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADULTS & CHILDREN -->
+    <div class="field-row">
+      <div class="field">
+        <label>Adults</label>
+        <div class="select-wrap">
+          <select id="adults" onchange="updatePrice()">
+            <option value="1">1 Adult</option>
+            <option value="2">2 Adults</option>
+            <option value="3">3 Adults</option>
+            <option value="4">4 Adults</option>
+            <option value="5">5 Adults</option>
+            <option value="6">6 Adults</option>
+            <option value="7">7 Adults</option>
+            <option value="8">8 Adults</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label>Children <em style="font-style:normal;color:#aaa">(under 12)</em></label>
+        <div class="select-wrap">
+          <select id="children" onchange="updatePrice()">
+            <option value="0">No Children</option>
+            <option value="1">1 Child</option>
+            <option value="2">2 Children</option>
+            <option value="3">3 Children</option>
+            <option value="4">4 Children</option>
+            <option value="5">5 Children</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAME & EMAIL -->
+    <div class="field">
+      <label>Full Name</label>
+      <input type="text" id="fullName" placeholder="Enter your full name">
+    </div>
+    <div class="field">
+      <label>Email Address</label>
+      <input type="email" id="email" placeholder="you@example.com">
+    </div>
+
+    <!-- PRICE -->
+    <div class="price-box">
+      <div class="price-left">
+        <div class="price-label">Total Price</div>
+        <div class="price-value" id="totalPrice">EGP 299 <span>/ person</span></div>
+        <div class="price-breakdown" id="priceBreakdown"></div>
+      </div>
+      <div class="price-perks">
+        <div>Free cancellation</div>
+        <div>Guide included</div>
+      </div>
+    </div>
+
+    <button class="btn-book" onclick="handleBook()">BOOK NOW →</button>
+
+    <div class="trust-bar">
+      <span>🔒 Secure payment</span>
+      <span>⭐ 4.9 rated</span>
+      <span>✓ Instant confirm</span>
+      <span>🗓 Flexible dates</span>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">Booking Confirmed!</div>
+<footer>
+        <div class="footer-contentt">
+            <p>&copy; 2026 FCAI Helwan University - Web Development Project</p>
+        </div>
+    </footer>
+</body>
+<script src="./js/script.js"></script>
+<script src="./js/profile (1).js"></script>
+
+</html>

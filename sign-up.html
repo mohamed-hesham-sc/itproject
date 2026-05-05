@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/profile.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./css/sign-in.css">
+</head>
+
+<body>
+    <header>
+    <nav class="container profile-nav-inner">
+      <div class="profile-nav-brand">
+        <i class="fa-solid fa-ankh" aria-hidden="true"></i>
+        <span>Kemet</span>
+      </div>
+
+      <ul class="profile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="places.html">Places</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="profile.html" >Profile</a></li>
+      </ul>
+
+      <div class="profile-theme-toggle-wrap">
+        <div class="signin">
+      <a href="./logIn.html">Log In</a>
+      <a href="./sign-up.html" class="active">Sign up</a>
+
+    </div>
+        <i class="fa-solid fa-sun" aria-hidden="true"></i>
+        <label class="profile-toggle-switch">
+          <input type="checkbox" id="profile-theme-toggle" aria-label="Toggle dark mode" />
+          <span class="profile-slider"></span>
+        </label>
+        <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        
+      </div>
+    </nav>
+  </header>
+    <div class="login-form">
+        <div class="twoPages">
+            <div class="main">
+                <h2>Create Account</h2>
+                <form action="./index.html" method="post" id="signupForm" novalidate>
+                    <label for="user-name">First Name:</label>
+                    <br>
+                    <input type="text" id="user-name" name="" placeholder="First Name" required>
+                    <br>
+                    <label for="last-name">last Name:</label>
+                    <br>
+                    <input type="text" name="" id="last-name" placeholder="Last Name" required>
+                    <br>
+                    <label for="user-email">Your Gmail:</label>
+                    <br>
+                    <input type="email" id="user-email" name="email" placeholder="example@gmail.com">
+                    <br>
+                    <label for="newPass">Create Password:</label>
+                    <br>
+                    <input type="password" name="" id="newPass" placeholder="Enter New Password" required>
+                    <br>
+                    <label for="confPass">Confirm Password:</label>
+                    <br>
+                    <input type="password" name="" id="confPass" placeholder="Confirm Password" required>
+                    <br>
+                    <p id="error-msg" style="color: red; font-size: 14px;"></p>
+                    <br>
+                    <button class="btn" type="submit">Register</button>
+                    <button class="btn" type="reset">Reset</button>
+                </form>
+                <br>
+                <p class="account">Already have an account? <a href="login.html">Login</a></p>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="./js/sign-in.js"></script>
+    <script src=".//js/profile (1).js"></script>
+    <footer>
+        <div class="footer-contentt">
+            <p>&copy; 2026 FCAI Helwan University - Web Development Project</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kemet</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/profile.css" />
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="pr" />
+</head>
+<body>
+    <div class="body">
+    <header>
+    <nav class="container profile-nav-inner">
+      <div class="profile-nav-brand">
+        <i class="fa-solid fa-ankh" aria-hidden="true"></i>
+        <span>Kemet</span>
+      </div>
+
+      <ul class="profile-nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="places.html">Places</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="profile.html">Profile</a></li>
+      </ul>
+
+     <div class="profile-theme-toggle-wrap">
+        <div class="signin">
+      <a href="./logIn.html">Log In</a>
+      <a href="./sign-up.html">Sign up</a>
+
+    </div>
+        <i class="fa-solid fa-sun" aria-hidden="true"></i>
+        <label class="profile-toggle-switch">
+          <input type="checkbox" id="profile-theme-toggle" aria-label="Toggle dark mode" />
+          <span class="profile-slider"></span>
+        </label>
+        <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        
+      </div>
+    </nav>
+  </header>
+    <main>
+        <section class="heroooo">
+            <div class="heroo-contentt">
+                <h1>EGYPT</h1>
+                <h2>The Cradle of Civilization</h2>
+                <p>Discover the secrets of the past through a modern lens.</p>
+                <button class="explore-btn" onclick="gohomee()">Explore Wonders</button>
+                <script>
+                    function gohomee(){
+                        window.location.href="./places.html";
+                    }
+                </script>
+            </div>
+        </section>
+
+        <section class="featuress-grid">
+            <article class="feature-cardd">
+                <h3>Virtual View</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.241123!2d31.1342!3d29.9792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDU4JzQ1LjEiTiAzMcKwMDgnMDMuMSJF!5e0!3m2!1sen!2seg!4v123456789" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </article>
+        </section>
+
+        <section class="dataa-table-section">
+            <h3>Suggested places :</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Monument</th>
+                        <th>Location</th>
+                        <th>Entry Fee (Egyptian)</th>
+                        <th>Operating Hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pyramids & Sphinx</td>
+                        <td>Giza</td>
+                        <td>60 EGP</td>
+                        <td>9:00 AM - 5:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Karnak Temple</td>
+                        <td>Luxor</td>
+                        <td>40 EGP</td>
+                        <td>6:00 AM - 6:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Valley of the Kings</td>
+                        <td>Luxor</td>
+                        <td>60 EGP</td>
+                        <td>6:00 AM - 4:00 PM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="media-containerrr">
+            <h3>Witness The Greatness</h3>
+            <video controls>
+                <source src="https://youtu.be/ghq5n5AMFtE?si=jrPbykoXecnnnPfr">
+            </video>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-contentt">
+            <p>&copy; 2026 FCAI Helwan University - Web Development Project</p>
+        </div>
+    </footer>
+</div>
+<script src="./js/index (1).js"></script>
+    <script src=".//js/profile (1).js"></script>
+
+</body>
+</html>

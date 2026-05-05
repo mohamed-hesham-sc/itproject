@@ -1,0 +1,297 @@
+*, *::before, *::after { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; }
+
+  :root {
+    --gold:         #C8973A;
+    --gold-light:   #E3B865;
+    --gold-dark:    #8B6420;
+    --cream:        #F4EFE4;
+    --cream-dark:   #E8DFCC;
+    --brown-dark:   #1a1508;
+    --brown-light:  #3D2E0E;
+    --sand:         #D4B483;
+    --white:        #FDFAF5;
+  }
+
+  
+  /* ── LAYOUT ── */
+  .page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+  }
+
+  /* ── LEFT PANEL ── */
+  .panel-left {
+    position: sticky;
+    top: 72px;
+    height: calc(100vh - 72px);
+    overflow: hidden;
+  }
+
+  .destination-image {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: opacity .6s ease, transform .8s ease;
+    display: block;
+  }
+
+  .destination-image.fade-out { 
+    opacity: 0; 
+    transform: scale(1.04); 
+  }
+
+  .left-overlay {
+    position: absolute; 
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(15,10,2,.82) 0%,
+      rgba(15,10,2,.25) 45%,
+      transparent 70%
+    );
+    pointer-events: none;
+  }
+
+  .left-caption {
+    position: absolute; 
+    bottom: 44px; 
+    left: 36px; 
+    right: 36px;
+  }
+
+  .left-caption h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(22px, 2.8vw, 34px);
+    font-weight: 700;
+    color: var(--gold-light);
+    line-height: 1.18;
+    text-shadow: 0 2px 12px rgba(0,0,0,.5);
+    transition: opacity .5s ease;
+  }
+  .left-caption p {
+    margin-top: 8px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px; font-weight: 300;
+    color: rgba(244,239,228,.82);
+    transition: opacity .5s ease;
+  }
+  .rating-badge {
+    position: absolute; top: 28px; right: 28px;
+    background: rgba(15,10,2,.55);
+    border: 1px solid rgba(200,151,58,.4);
+    backdrop-filter: blur(8px);
+    border-radius: 50px;
+    padding: 6px 16px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px; 
+    color: var(--gold-light);
+    display: flex; 
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* ── RIGHT PANEL ── */
+  .panel-right {
+    background: var(--cream);
+    padding: 48px 52px 60px;
+    overflow-y: auto;
+  }
+  .form-header { margin-bottom: 36px; }
+  
+  .form-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 28px; font-weight: 600;
+    color: var(--brown-dark);
+    letter-spacing: .04em;
+  }
+
+  .form-header p {
+    margin-top: 6px;
+    font-size: 14px; font-weight: 300;
+    color: #7A6840;
+  }
+
+  /* ── FIELD GROUPS ── */
+  .field { 
+    margin-bottom: 22px;
+    }
+
+  .field-row { 
+    display: grid;
+    grid-template-columns: 1fr 1fr; gap: 18px;
+    margin-bottom: 22px; 
+  }
+
+  label {
+    display: block;
+    font-size: 11px; font-weight: 500; letter-spacing: .12em;
+    color: #6B5830;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  select, input[type="text"], input[type="date"], input[type="email"] {
+    width: 100%;
+    height: 50px;
+    padding: 0 16px;
+    background: var(--white);
+    border: 1.5px solid var(--cream-dark);
+    border-radius: 8px;
+    font-family: 'Jost', sans-serif;
+    font-size: 14px; font-weight: 400;
+    color: var(--brown-dark);
+    appearance: none;
+    outline: none;
+  }
+  select:focus, input:focus {
+    border-color: var(--gold);
+  }
+
+  .select-wrap {
+    position: relative;
+  }
+  .select-wrap::after {
+    content: '';
+    position: absolute; right: 16px; top: 50%;
+    transform: translateY(-50%);
+    width: 0; height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid var(--gold);
+    pointer-events: none;
+  }
+
+  /* ── PRICE BOX ── */
+  .price-box {
+    background: var(--brown-dark);
+    border-radius: 12px;
+    padding: 22px 28px;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    margin: 28px 0 22px;
+  }
+  
+  .price-label {
+    font-size: 11px; letter-spacing: .14em; font-weight: 500;
+    color: rgba(212,180,131,.7);
+    text-transform: uppercase;
+  }
+  .price-value {
+    font-family: 'Cinzel', serif;
+    font-size: 28px; font-weight: 700;
+    color: var(--gold-light);
+    margin-top: 2px;
+    transition: all .3s ease;
+  }
+  .price-value span {
+    font-size: 14px; font-weight: 400;
+    color: rgba(212,180,131,.7);
+    font-family: 'Jost', sans-serif;
+    letter-spacing: .04em;
+  }
+  .price-perks {
+    text-align: right;
+    font-size: 12.5px; color: rgba(212,180,131,.75);
+    line-height: 1.9;
+  }
+  .price-perks div::before { content: '✓  '; color: var(--gold); }
+
+  /* price breakdown tooltip */
+  .price-breakdown {
+    font-size: 12px;
+    color: rgba(212,180,131,.6);
+    margin-top: 2px;
+    font-family: 'Jost', sans-serif;
+    min-height: 16px;
+  }
+
+  /* ── BOOK BUTTON ── */
+  .btn-book {
+    width: 100%;
+    height: 56px;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+    border: none;
+    border-radius: 10px;
+    font-family: 'Cinzel', serif;
+    font-size: 14px; font-weight: 600; letter-spacing: .18em;
+    color: var(--brown-dark);
+    cursor: pointer;
+    transition: transform .15s, box-shadow .2s, filter .2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-book::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: rgba(255,255,255,0);
+    transition: background .2s;
+  }
+  .btn-book:hover { filter: brightness(1.08); box-shadow: 0 8px 28px rgba(200,151,58,.35); transform: translateY(-1px); }
+  .btn-book:active { transform: translateY(0); }
+
+  /* ── TRUST BAR ── */
+  .trust-bar {
+    display: flex; gap: 24px; justify-content: center;
+    margin-top: 18px;
+    font-size: 12px; color: #8A7450;
+    flex-wrap: wrap;
+  }
+  .trust-bar span { display: flex; align-items: center; gap: 5px; }
+
+  /* ── DESTINATION TABS ── */
+  .dest-tabs {
+    display: flex; gap: 8px; flex-wrap: wrap;
+    margin-bottom: 22px;
+  }
+  .dest-tab {
+    padding: 6px 14px;
+    background: var(--white);
+    border: 1.5px solid var(--cream-dark);
+    border-radius: 50px;
+    font-size: 12px; font-weight: 500; letter-spacing: .04em;
+    color: #7A6840;
+    cursor: pointer;
+    transition: all .2s;
+    white-space: nowrap;
+  }
+  .dest-tab:hover { 
+    border-color: var(--gold); color: var(--gold-dark); 
+  }
+
+  .dest-tab.active {
+    background: var(--brown-dark);
+    border-color: var(--brown-dark);
+    color: var(--gold-light);
+  }
+
+  /* ── Booked ── */
+  .toast {
+    position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%) translateY(80px);
+    background: var(--brown-dark); border: 1px solid var(--gold);
+    border-radius: 50px; padding: 14px 28px;
+    font-family: 'Cinzel', serif; font-size: 13px; color: var(--gold-light);
+    letter-spacing: .08em;
+    transition: transform .4s cubic-bezier(.34,1.56,.64,1), opacity .3s;
+    opacity: 0; pointer-events: none; z-index: 999;
+  }
+  .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+  @media (max-width: 860px) {
+    .page { grid-template-columns: 1fr; }
+    .panel-left { position: relative; top: 0; height: 280px; }
+    .panel-right { padding: 32px 24px 48px; }
+    .field-row { grid-template-columns: 1fr; gap: 0; }
+    .field-row .field { margin-bottom: 18px; }
+  }
+  footer {
+    padding: 10px 100px;
+    text-align: center;
+    background: var(--brown-dark);
+    color: var(--white);
+    border-top: 1px solid var(--gold);
+}
